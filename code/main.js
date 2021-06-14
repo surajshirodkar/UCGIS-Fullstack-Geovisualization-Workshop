@@ -49,7 +49,7 @@ var popup = L.popup();
 
 function onMapClick(event) {
     popup.setLatLng(event.latlng)
-        .setContent("You clicked the map at " + event.latlng.toString())
+        .setContent("Suraj things you clicked the map at " + event.latlng.toString())
         .openOn(mymap);
 }
 
