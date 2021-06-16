@@ -1,5 +1,6 @@
-var mymap = L.map('mapid').setView([40, -97], 5);
+//var mymap = L.map('mapid').setView([40, -97], 5);
 
+var mymap = L.map('mapid').setView(map.unproject([198511.910315310698934, 451935.985398797609378]), 5);
 //L.tileLayer is the function to define a tile layer for Leaflet, which is indicated by "L". Inside this function, there are two parameters:
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom: 18,
