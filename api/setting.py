@@ -1,10 +1,10 @@
 DOMAIN = {
-    '2019_03': {'datasource': {'source': '2019_03'}},
+    '1936_dem': {'datasource': {'source': '1936_dem'}},
         }
 MONGO_HOST = 'localhost'
 MONGO_PORT = 27017
 
-MONGO_DBNAME = "UFO_Witness"
+MONGO_DBNAME = "Seoul_1936"
 
 ALLOW_UNKNOWN=True
 
