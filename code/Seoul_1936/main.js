@@ -26,7 +26,7 @@ L.polygon([
 ]).addTo(mymap).bindPopup("I am an alone polygon.");
 
 
-$.get("http://127.0.0.1:13579/2019_03", visualize_geojson)
+$.get("http://127.0.0.1:13579/1936_dem", visualize_geojson) 
 
 
 
@@ -41,7 +41,7 @@ function format_data(data) {
     var items = data._items;
     var geoJSON = {
         "type": "FeatureCollection",
-        "name": "UFO",
+        "name": "Seoul",
         "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
         "features": null
     }
