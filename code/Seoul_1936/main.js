@@ -19,6 +19,13 @@ L.circle([42, -90], 50000, {
     fillOpacity: 0.5
 }).addTo(mymap).bindPopup("I am an alone circle.");
 
+L.circle([198511.910315310698934, 451935.985398797609378], 50000, {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5
+}).addTo(mymap).bindPopup("I am an alone circle.");
+
+
 L.polygon([
     [45, -90],
     [51.503, -85],
