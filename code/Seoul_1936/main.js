@@ -1,6 +1,6 @@
-//var mymap = L.map('mapid').setView([40, -97], 5);
+var mymap = L.map('mapid').setView([40, -97], 5);
 
-var mymap = L.map('mapid').setView(map.unproject([198511.910315310698934, 451935.985398797609378]), 7);
+//var mymap = L.map('mapid').setView(map.unproject([198511.910315310698934, 451935.985398797609378]), 7);
 //L.tileLayer is the function to define a tile layer for Leaflet, which is indicated by "L". Inside this function, there are two parameters:
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom: 18,
@@ -34,7 +34,8 @@ L.polygon([
 ]).addTo(mymap).bindPopup("I am an alone polygon.");
 
 
-$.get("http://127.0.0.1:13579/1936_dem", visualize_geojson) 
+$.get("https://surajshirodkar.github.io/UCGIS-Fullstack-Geovisualization-Workshop/data/Sol_Test.geojson", visualize_geojson)
+//$.get("http://127.0.0.1:13579/1936_dem", visualize_geojson) 
 
 
 
