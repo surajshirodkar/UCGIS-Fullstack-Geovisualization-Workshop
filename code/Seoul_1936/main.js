@@ -75,6 +75,19 @@ function convert_point_to_symbol(feature, latlng) {
     });
 }
 
+var highlight = 
+{
+    color: "#333333",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+};
+
+function highlightLayer(layerID)
+{
+    map._layers['name'+layerID].setStyle(highlight);
+}
+
 var popup = L.popup();
 
 function onMapClick(event) {
