@@ -38,13 +38,19 @@ $.get("https://surajshirodkar.github.io/UCGIS-Fullstack-Geovisualization-Worksho
 //$.get("http://127.0.0.1:13579/1936_dem", visualize_geojson) 
 
 
-
 function visualize_geojson(data) {
     //data = format_data(data);
     L.geoJSON(data, {
         pointToLayer: convert_point_to_symbol
-    }).addTo(mymap);
+    }).addTo(mymap).bindPopup(data["features/properties"]);
 }
+
+// function visualize_geojson(data) {
+//     //data = format_data(data);
+//     L.geoJSON(data, {
+//         pointToLayer: convert_point_to_symbol
+//     }).addTo(mymap);
+// }
 
 function format_data(data) {
     var items = data._items;
