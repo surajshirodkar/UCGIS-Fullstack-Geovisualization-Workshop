@@ -41,7 +41,7 @@ $.get("https://surajshirodkar.github.io/UCGIS-Fullstack-Geovisualization-Worksho
 function visualize_geojson(data) {
     //data = format_data(data);
     L.geoJSON(data, {
-        pointToLayer: convert_point_to_symbol
+        pointToLayer: convert_point_to_symbol,
         onEachFeature: function(feature, layer) {
             layer.on({
                 'mouseover': function (e){
