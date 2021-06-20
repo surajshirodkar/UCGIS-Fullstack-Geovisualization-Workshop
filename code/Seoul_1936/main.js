@@ -40,7 +40,7 @@ $.get("https://surajshirodkar.github.io/UCGIS-Fullstack-Geovisualization-Worksho
 
 
 function visualize_geojson(data) {
-  //  data = format_data(data);
+    data = format_data(data);
     L.geoJSON(data, {
         pointToLayer: convert_point_to_symbol
     }).addTo(mymap);
