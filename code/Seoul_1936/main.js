@@ -89,6 +89,7 @@ function dehighlight (layer) {
     if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
         geojson.resetStyle(layer);
     }
+    geojson.resetStyle(layer);
   }
 
 function highlight (layer) {
@@ -109,10 +110,10 @@ function highlight (layer) {
 //     fillOpacity: 0.8
 // };
 
-function highlightLayer(layerID)
-{
-    map._layers['name'+layerID].setStyle(highlight);
-}
+// function highlightLayer(layerID)
+// {
+//     map._layers['name'+layerID].setStyle(highlight);
+// }
 
 var popup = L.popup();
 
