@@ -88,7 +88,8 @@ var selected = null;
 
 function dehighlight (layer) {
     if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
-        geoJSON.resetStyle(layer);
+        //geoJSON.resetStyle(layer);
+        layer.bringToBack();
     }
     //geojson.resetStyle(layer);
   }
