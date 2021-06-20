@@ -42,7 +42,17 @@ function visualize_geojson(data) {
     //data = format_data(data);
     L.geoJSON(data, {
         pointToLayer: convert_point_to_symbol
-    }).addTo(mymap).bindPopup(data["features"]);
+        onEachFeature: function(feature, layer) {
+            layer.on({
+                'mouseover': function (e){
+                    highlight(e.target);
+                },
+                'mouseout': function (e) {
+                    dehighlight(e.target);
+                }
+            });
+        }
+    }).addTo(mymap).bindPopup(data["features/properties"]);
 }
 
 // function visualize_geojson(data) {
@@ -60,7 +70,7 @@ function format_data(data) {
         "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
         "features": null
     }
-    geoJSON["features/properties"] = items;
+    geoJSON["features"] = items;
     return geoJSON
 }
 
@@ -75,13 +85,29 @@ function convert_point_to_symbol(feature, latlng) {
     });
 }
 
-var highlight = 
-{
-    color: "#333333",
-    weight: 1,
-    opacity: 1,
-    fillOpacity: 0.8
-};
+function dehighlight (layer) {
+    if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
+        geojson.resetStyle(layer);
+    }
+  }
+
+function highlight (layer) {
+    layer.setStyle({
+        weight: 5,
+        dashArray: ''
+    });
+    if (!L.Browser.ie && !L.Browser.opera) {
+        layer.bringToFront();
+    }
+}
+
+// var highlight = 
+// {
+//     color: "#333333",
+//     weight: 1,
+//     opacity: 1,
+//     fillOpacity: 0.8
+// };
 
 function highlightLayer(layerID)
 {
