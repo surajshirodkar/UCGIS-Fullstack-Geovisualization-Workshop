@@ -60,7 +60,7 @@ function format_data(data) {
         "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
         "features": null
     }
-    geoJSON["features"] = items;
+    geoJSON["features/properties"] = items;
     return geoJSON
 }
 
@@ -97,3 +97,4 @@ function onMapClick(event) {
 }
 
 mymap.on('click', onMapClick);
+mymap.on('hover', highlightLayer);
