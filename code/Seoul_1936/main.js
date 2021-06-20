@@ -84,12 +84,13 @@ function convert_point_to_symbol(feature, latlng) {
         fillOpacity: 0.8
     });
 }
+var selected = null;
 
 function dehighlight (layer) {
     if (selected === null || selected._leaflet_id !== layer._leaflet_id) {
         geojson.resetStyle(layer);
     }
-    geojson.resetStyle(layer);
+    //geojson.resetStyle(layer);
   }
 
 function highlight (layer) {
