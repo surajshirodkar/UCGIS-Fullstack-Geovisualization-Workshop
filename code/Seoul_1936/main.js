@@ -42,7 +42,7 @@ function visualize_geojson(data) {
     //data = format_data(data);
     L.geoJSON(data, {
         pointToLayer: convert_point_to_symbol
-    }).addTo(mymap).bindPopup(data["features/properties"]);
+    }).addTo(mymap).bindPopup(data["features"]);
 }
 
 // function visualize_geojson(data) {
